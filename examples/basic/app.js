@@ -39,7 +39,7 @@ var App = React.createClass({
     return (
       <div>
         <button onClick={this.openModal}>Open Modal</button>
-        <Modal
+        {this.state.modalIsOpen && <Modal
           ref="mymodal"
           closeTimeoutMS={150}
           isOpen={this.state.modalIsOpen}
@@ -60,7 +60,7 @@ var App = React.createClass({
             <button>hi</button>
             <button>hi</button>
           </form>
-        </Modal>
+        </Modal>}
       </div>
     );
   }
